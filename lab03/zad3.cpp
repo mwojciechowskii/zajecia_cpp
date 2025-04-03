@@ -10,7 +10,6 @@ void get_input(char* dna){
 	cin >> dna;
 
 	transform(dna, dna + strlen(dna), dna, ::toupper);
-
 }
 
 bool check_input_letters(char* dna){
@@ -58,7 +57,7 @@ int main(){
 		if (result == -1){
 			continue;
 		}else {
-		cout << "your dna: " << dna << "your substring: " << substring << endl;
+		cout << "your dna: " << dna << " your substring: " << substring << endl;
 		cout << "appearances: " << result << endl;
 		}
 	}
