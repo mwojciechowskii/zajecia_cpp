@@ -21,35 +21,22 @@ bool validate_dna(const char dna){
 	dna == 'a' || dna == 't' || dna == 'c' || dna == 'g');
 }
 
-/*int kayak(char* dna, size_t len){
-
-	char* left = dna;
-	char* right = dna + len -1;
-	while (left < right){
-		if (!validate_dna(*left) || !validate_dna(*right))
-			return 3;				
-		if (tolower(*left) != tolower(*right))
-			return 2;
-		left++;right--;
-	}
-	return 1;
-}
-*/
-
 int kayak(const string &dnastr, const size_t len) {
 
-	size_t left = 0;
-	size_t right = len - 1;
-        while(left < right) {
-        if(!validate_dna(dnastr[left]) || !validate_dna(dnastr[right]))
+    const char* left = &dnastr[0];
+    const char* right = &dnastr[0] + len - 1;
+
+    while (left < right) {
+        if (!validate_dna(*left) || !validate_dna(*right))
             return 3;
-        if(tolower(dnastr[left]) != tolower(dnastr[right]))
+        if (tolower(*left) != tolower(*right))
             return 2;
         left++;
         right--;
     }
     return 1;
 }
+
 void run(const char* seq, const size_t len){
 
 	string s(seq, len);
