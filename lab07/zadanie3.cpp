@@ -38,13 +38,17 @@ int run(){
 		}
 		//celowo nie uzywam tutaj auto 
 		std::unordered_map<std::string, int>::iterator dup_it = duplicates.find(line);
-		if (dup_it == duplicates.end()){
-			duplicates.insert({line, 1});
-		}else{
-			if (++(dup_it->second) == 2)
-				count++;
-		}
-	}
+
+		 if (dup_it == duplicates.end()){
+            duplicates.insert({line, 1});
+        } else {
+            ++(dup_it->second);
+            
+            if (dup_it->second > count){
+                count = dup_it->second;
+            }
+        }
+    }
 	return count;
 }
 
