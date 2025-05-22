@@ -1,5 +1,5 @@
 #include <iostream>
-#include <dna.hpp>
+#include "dna.hpp"
 
 /*zaprezentowanie mozliwosci tej klasy wydrukowal mi copilot, wlacznie ze stworzeniem makefile,
 bo mi sie nie chcialo recznie tego pisac */

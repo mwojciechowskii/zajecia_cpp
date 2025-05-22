@@ -1,5 +1,5 @@
+#include "dna.hpp"
 #include <cstddef>
-#include <dna.hpp>
 #include <algorithm>
 #include <iostream>
 #include <fstream>
